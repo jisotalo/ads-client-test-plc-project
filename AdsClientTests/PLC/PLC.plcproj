@@ -1,0 +1,130 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <FileVersion>1.0.0.0</FileVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{e1a48be2-e57d-4bea-a2ca-359556123faf}</ProjectGuid>
+    <SubObjectsSortedByName>True</SubObjectsSortedByName>
+    <DownloadApplicationInfo>true</DownloadApplicationInfo>
+    <WriteProductVersion>true</WriteProductVersion>
+    <GenerateTpy>false</GenerateTpy>
+    <Name>PLC</Name>
+    <ProgramVersion>3.1.4023.0</ProgramVersion>
+    <Application>{4cee44d9-1cd8-4d4a-a67f-543894c3ce3d}</Application>
+    <TypeSystem>{0d02e605-0ece-4f1c-aed9-b7bfe01223f2}</TypeSystem>
+    <Implicit_Task_Info>{4066df5d-445a-4334-8df6-521d734ec931}</Implicit_Task_Info>
+    <Implicit_KindOfTask>{3862e59a-c8b6-473d-97b2-d19f8301b269}</Implicit_KindOfTask>
+    <Implicit_Jitter_Distribution>{8c342f20-fc11-4a0d-a88c-2b7c38a6b379}</Implicit_Jitter_Distribution>
+    <LibraryReferences>{bd4d0900-84d4-4ccb-837f-d1ba381e18d6}</LibraryReferences>
+    <Description>
+Copyright (c) 2022 Jussi Isotalo &lt;j.isotalo91@gmail.com&gt;
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE</Description>
+    <Released>false</Released>
+    <Company>Jussi Isotalo</Company>
+    <Title>Test PLC project for ads-client library</Title>
+    <Author>Jussi Isotalo</Author>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AdsClientTests\GVL_AdsClientTests.TcGVL">
+      <SubType>Code</SubType>
+      <LinkAlways>true</LinkAlways>
+    </Compile>
+    <Compile Include="AdsClientTests\PRG_AdsClientTests.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AdsClientTests\Reading and Writing\GVL_ReadingAndWriting.TcGVL">
+      <SubType>Code</SubType>
+      <LinkAlways>true</LinkAlways>
+    </Compile>
+    <Compile Include="AdsClientTests\RPC\FB_Rpc.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AdsClientTests\RPC\GVL_RPC.TcGVL">
+      <SubType>Code</SubType>
+      <LinkAlways>true</LinkAlways>
+    </Compile>
+    <Compile Include="AdsClientTests\_Data types etc\E_Enum.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AdsClientTests\_Data types etc\ST_Struct.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AdsClientTests\_Data types etc\ST_Issue94.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AdsClientTests\_Data types etc\ST_Issue94_Byte.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AdsClientTests\_Data types etc\ST_PackMode1.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AdsClientTests\_Data types etc\ST_PackMode8.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AdsClientTests\_Data types etc\U_Union.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PlcTask.TcTTO">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <PlaceholderReference Include="Tc2_Standard">
+      <DefaultResolution>Tc2_Standard, * (Beckhoff Automation GmbH)</DefaultResolution>
+      <Namespace>Tc2_Standard</Namespace>
+    </PlaceholderReference>
+    <PlaceholderReference Include="Tc2_System">
+      <DefaultResolution>Tc2_System, * (Beckhoff Automation GmbH)</DefaultResolution>
+      <Namespace>Tc2_System</Namespace>
+    </PlaceholderReference>
+    <PlaceholderReference Include="Tc3_Module">
+      <DefaultResolution>Tc3_Module, * (Beckhoff Automation GmbH)</DefaultResolution>
+      <Namespace>Tc3_Module</Namespace>
+    </PlaceholderReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AdsClientTests" />
+    <Folder Include="AdsClientTests\RPC" />
+    <Folder Include="AdsClientTests\_Data types etc" />
+    <Folder Include="AdsClientTests\Reading and Writing" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PLC.tmc">
+      <SubType>Content</SubType>
+    </None>
+  </ItemGroup>
+  <ProjectExtensions>
+    <PlcProjectOptions>
+      <XmlArchive>
+  <Data>
+    <o xml:space="preserve" t="OptionKey">
+      <v n="Name">"&lt;ProjectRoot&gt;"</v>
+      <d n="SubKeys" t="Hashtable" />
+      <d n="Values" t="Hashtable" />
+    </o>
+  </Data>
+  <TypeList>
+    <Type n="Hashtable">System.Collections.Hashtable</Type>
+    <Type n="OptionKey">{54dd0eac-a6d8-46f2-8c27-2f43c7e49861}</Type>
+    <Type n="String">System.String</Type>
+  </TypeList>
+</XmlArchive>
+    </PlcProjectOptions>
+  </ProjectExtensions>
+</Project>

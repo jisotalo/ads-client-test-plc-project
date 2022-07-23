@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.9">
+  <DUT Name="ST_PackMode1" Id="{dd138f52-6aed-4ee1-ab00-ad5e4a74ad62}">
+    <Declaration><![CDATA[{attribute 'pack_mode' := '1'}
+TYPE ST_PackMode1 :
+STRUCT
+	BoolValue 	: BOOL := TRUE;
+	StringValue : STRING(27) := 'A string value';
+	LrealValue 	: LREAL := 12321.3123123;
+	BoolArray 	: ARRAY[1..5] OF BOOL;
+	BlockArray 	: ARRAY[1..5] OF r_trig;
+	LargeBlock 	: Tc2_System.FB_FileOpen := (sPathName := 'test_path');
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

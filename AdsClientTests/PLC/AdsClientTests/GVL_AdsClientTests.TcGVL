@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.9">
+  <GVL Name="GVL_AdsClientTests" Id="{df176121-69f2-4834-ba42-2f401dc63f8f}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+	VERSION			: string := '1.0.0.0';
+	IsReset 		: BOOL := TRUE;
+	IsTestProject 	: BOOL := TRUE;
+	IsRunning 		: BOOL;
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

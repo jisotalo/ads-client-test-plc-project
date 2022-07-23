@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.9">
+  <POU Name="PRG_AdsClientTests" Id="{d3e9ca6d-84a0-4f3a-9bdc-c7b060ad3f7f}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_AdsClientTests
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[GVL_AdsClientTests.IsRunning := TRUE;]]></ST>
+    </Implementation>
+    <LineIds Name="PRG_AdsClientTests">
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

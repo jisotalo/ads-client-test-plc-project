@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.9">
+  <DUT Name="ST_Struct" Id="{83c76810-70de-4c61-916c-d8b2b21244c0}">
+    <Declaration><![CDATA[TYPE ST_Struct :
+STRUCT
+	SomeText : STRING(50) := 'Hello ads-client';
+	SomeReal : REAL := 3.14159265359;
+	SomeDate : DT := DT#2020-4-13-12:25:33;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

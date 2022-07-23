@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.9">
+  <POU Name="FB_Rpc" Id="{85a5d823-5c41-4c26-a181-82a08e3d478f}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_Rpc
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="Calculator" Id="{f0891cd6-229e-4300-8553-fa06a430c8f0}">
+      <Declaration><![CDATA[{attribute 'TcRpcEnable'}
+METHOD Calculator : BOOL
+VAR_INPUT
+	Value1	: REAL;
+	Value2	: REAL;
+END_VAR
+VAR_OUTPUT
+	Sum			: REAL;
+	Product 	: REAL;
+	Division	: REAL;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[//Return TRUE if all success
+Calculator := TRUE;
+
+Sum := Value1 + Value2;
+Product := Value1 * Value2;
+
+IF Value2 <> 0 THEN
+	Division := Value1 / Value2;
+ELSE
+	Division := 0;
+	Calculator := FALSE;
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="StructTest" Id="{6ef4d474-76c0-4d34-920e-b9c2c4860978}">
+      <Declaration><![CDATA[{attribute 'TcRpcEnable'}
+METHOD StructTest : ST_Struct
+VAR_INPUT
+	Input	: ST_Struct;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[StructTest.SomeText := CONCAT('Response: ', Input.SomeText);
+StructTest.SomeReal := Input.SomeReal * 10.0;
+StructTest.SomeDate := Input.SomeDate + T#24H;]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="FB_Rpc">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_Rpc.Calculator">
+      <LineId Id="21" Count="0" />
+      <LineId Id="23" Count="0" />
+      <LineId Id="22" Count="0" />
+      <LineId Id="5" Count="0" />
+      <LineId Id="14" Count="0" />
+      <LineId Id="17" Count="0" />
+      <LineId Id="16" Count="0" />
+      <LineId Id="15" Count="0" />
+      <LineId Id="18" Count="0" />
+      <LineId Id="24" Count="0" />
+      <LineId Id="19" Count="1" />
+    </LineIds>
+    <LineIds Name="FB_Rpc.StructTest">
+      <LineId Id="5" Count="0" />
+      <LineId Id="7" Count="1" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
