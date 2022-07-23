@@ -1,5 +1,7 @@
 # ads-client-test-plc-project
-A PLC project used for ads-client testing. 
+A PLC project used for [ads-client](https://github.com/jisotalo/ads-client) testing.
+
+See https://github.com/jisotalo/ads-client for TwinCAT ADS client for Node.js
 
 ## How to test `ads-client`
 1. Clone this repository
