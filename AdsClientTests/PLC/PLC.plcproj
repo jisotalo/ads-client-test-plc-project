@@ -59,6 +59,20 @@ SOFTWARE</Description>
       <SubType>Code</SubType>
       <LinkAlways>true</LinkAlways>
     </Compile>
+    <Compile Include="AdsClientTests\Subscription\GVL_Subscription.TcGVL">
+      <SubType>Code</SubType>
+      <LinkAlways>true</LinkAlways>
+    </Compile>
+    <Compile Include="AdsClientTests\Subscription\PRG_Subscription.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AdsClientTests\Symbols and datatypes\GVL_SymbolsAndDataTypes.TcGVL">
+      <SubType>Code</SubType>
+      <LinkAlways>true</LinkAlways>
+    </Compile>
+    <Compile Include="AdsClientTests\Symbols and datatypes\ST_TestDataType.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="AdsClientTests\_Data types etc\E_Enum.TcDUT">
       <SubType>Code</SubType>
     </Compile>
@@ -85,6 +99,9 @@ SOFTWARE</Description>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <PlaceholderReference Include="Tc2_DataExchange">
+      <DefaultResolution>Tc2_DataExchange, * (Beckhoff Automation GmbH)</DefaultResolution>
+    </PlaceholderReference>
     <PlaceholderReference Include="Tc2_Standard">
       <DefaultResolution>Tc2_Standard, * (Beckhoff Automation GmbH)</DefaultResolution>
       <Namespace>Tc2_Standard</Namespace>
@@ -93,6 +110,10 @@ SOFTWARE</Description>
       <DefaultResolution>Tc2_System, * (Beckhoff Automation GmbH)</DefaultResolution>
       <Namespace>Tc2_System</Namespace>
     </PlaceholderReference>
+    <PlaceholderReference Include="Tc2_Utilities">
+      <DefaultResolution>Tc2_Utilities, * (Beckhoff Automation GmbH)</DefaultResolution>
+      <Namespace>Tc2_Utilities</Namespace>
+    </PlaceholderReference>
     <PlaceholderReference Include="Tc3_Module">
       <DefaultResolution>Tc3_Module, * (Beckhoff Automation GmbH)</DefaultResolution>
       <Namespace>Tc3_Module</Namespace>
@@ -100,6 +121,8 @@ SOFTWARE</Description>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AdsClientTests" />
+    <Folder Include="AdsClientTests\Symbols and datatypes" />
+    <Folder Include="AdsClientTests\Subscription" />
     <Folder Include="AdsClientTests\RPC" />
     <Folder Include="AdsClientTests\_Data types etc" />
     <Folder Include="AdsClientTests\Reading and Writing" />
@@ -112,19 +135,19 @@ SOFTWARE</Description>
   <ProjectExtensions>
     <PlcProjectOptions>
       <XmlArchive>
-  <Data>
-    <o xml:space="preserve" t="OptionKey">
+        <Data>
+          <o xml:space="preserve" t="OptionKey">
       <v n="Name">"&lt;ProjectRoot&gt;"</v>
       <d n="SubKeys" t="Hashtable" />
       <d n="Values" t="Hashtable" />
     </o>
-  </Data>
-  <TypeList>
-    <Type n="Hashtable">System.Collections.Hashtable</Type>
-    <Type n="OptionKey">{54dd0eac-a6d8-46f2-8c27-2f43c7e49861}</Type>
-    <Type n="String">System.String</Type>
-  </TypeList>
-</XmlArchive>
+        </Data>
+        <TypeList>
+          <Type n="Hashtable">System.Collections.Hashtable</Type>
+          <Type n="OptionKey">{54dd0eac-a6d8-46f2-8c27-2f43c7e49861}</Type>
+          <Type n="String">System.String</Type>
+        </TypeList>
+      </XmlArchive>
     </PlcProjectOptions>
   </ProjectExtensions>
 </Project>

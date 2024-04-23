@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <GVL Name="GVL_SymbolsAndDataTypes" Id="{baf38304-40fd-4752-a79b-8ff5e0d39432}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL PERSISTENT
+    {attribute 'ads-client-attribute' := 'example-value-ääö'}; 
+	TestSymbol : STRING(82) := 'Some test value'; //Test comment äääöö
+	TestDataType : ST_TestDataType;
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>
