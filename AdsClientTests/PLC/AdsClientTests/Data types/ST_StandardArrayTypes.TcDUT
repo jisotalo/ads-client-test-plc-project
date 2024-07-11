@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <DUT Name="ST_StandardArrayTypes" Id="{a105f9eb-8b9e-4554-bf07-800e021710dc}">
+    <Declaration><![CDATA[TYPE ST_StandardArrayTypes :
+STRUCT
+	BOOL_ 	: ARRAY[0..2] OF BOOL := [TRUE, FALSE, TRUE];
+	BOOL_2 	: ARRAY[0..2] OF BOOL := [FALSE, TRUE, FALSE];
+	BYTE_ 	: ARRAY[0..2] OF BYTE := [255, 254, 0];
+	WORD_ 	: ARRAY[0..2] OF WORD := [65535, 65534, 0];
+	DWORD_ 	: ARRAY[0..2] OF DWORD := [4294967295, 4294967294, 0];
+	SINT_ 	: ARRAY[0..2] OF SINT := [127, 126, 0];
+	SINT_2 	: ARRAY[0..2] OF SINT := [-128, -127, 0];
+	USINT_ 	: ARRAY[0..2] OF USINT := [255, 254, 0];
+	INT_ 	: ARRAY[0..2] OF INT := [32767, 0, -32768];
+	INT_2 	: ARRAY[0..2] OF INT := [-32768, 0, 32767];
+	UINT_ 	: ARRAY[0..2] OF UINT := [65535, 65534, 0];
+	DINT_ 	: ARRAY[0..2] OF DINT := [2147483647, 0, -2147483648];
+	DINT_2 	: ARRAY[0..2] OF DINT := [-2147483648, 0, 2147483647];
+	UDINT_ 	: ARRAY[0..2] OF UDINT := [4294967295, 4294967294, 0];
+	REAL_ 	: ARRAY[0..2] OF REAL := [3.4E38, 0, -3.4E38];
+	REAL_2 	: ARRAY[0..2] OF REAL := [-3.4E38, 0, 3.4E38];
+	REAL_3 	: ARRAY[0..2] OF REAL := [75483.545, 0, -75483.545];
+	REAL_4 	: ARRAY[0..2] OF REAL := [-75483.545, 0, 75483.545];
+	STRING_	: ARRAY[0..2] OF STRING := ['A test string ääöö!!@@', '', 'String value'];
+	STRING_2: ARRAY[0..2] OF STRING(255) := [
+		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque bibendum mauris vel metus rutrum, sed gravida justo dignissim. Aenean et nisi cursus, auctor mi vel, posuere enim. Suspendisse ultricies mauris in finibus tristique. Nullam turpis duis.',
+		'',
+		'Proin tempor diam a felis fermentum, id molestie tortor pharetra. Phasellus condimentum rhoncus ultrices. Suspendisse ultricies nec neque quis sodales. In molestie vestibulum nulla eu gravida. Morbi orci ipsum, gravida elementum eros non, egestas egestas.'];
+	DATE_ 	: ARRAY[0..2] OF DATE := [D#2106-02-06, D#2106-02-05, TO_DATE(0)];
+	DT_ 	: ARRAY[0..2] OF DT := [DT#2106-02-06-06:28:15, DT#2106-02-06-06:28:14, TO_DT(0)];
+	DT_2 	: ARRAY[0..2] OF DATE_AND_TIME := [DT#2106-02-06-06:28:15, DT#2106-02-06-06:28:14, TO_DT(0)];
+	TOD_ 	: ARRAY[0..2] OF TOD := [TO_TOD(4294967295), TO_TOD(4294967294), TO_TOD(0)];
+	TOD_2 	: ARRAY[0..2] OF TIME_OF_DAY := [TO_TOD(4294967295), TO_TOD(4294967294), TO_TOD(0)];
+	TIME_ 	: ARRAY[0..2] OF TIME := [T#49D17H2M47S295MS, T#49D17H2M47S294MS, T#0S];
+	LWORD_	: ARRAY[0..2] OF LWORD := [18446744073709551615, 18446744073709551614, 0];
+	LINT_	: ARRAY[0..2] OF LINT := [9223372036854775807, 0, -9223372036854775808];
+	LINT_2	: ARRAY[0..2] OF LINT := [-9223372036854775808, 0, 9223372036854775807];
+	ULINT_	: ARRAY[0..2] OF ULINT := [18446744073709551615, 18446744073709551614, 0];
+	LREAL_ 	: ARRAY[0..2] OF LREAL := [1.7E308, 0, -1.7E308];
+	LREAL_2 : ARRAY[0..2] OF LREAL := [-1.7E308, 0, 1.7E308];
+	LREAL_3	: ARRAY[0..2] OF REAL := [75483.545, 0, -75483.545];
+	LREAL_4	: ARRAY[0..2] OF REAL := [-75483.545, 0, 75483.545];
+	WSTRING_: ARRAY[0..2] OF WSTRING := ["A test wstring ääöö!!@@ ẞẟΔش", "", "ẞẟΔ"];
+	WSTRING_2: ARRAY[0..2] OF WSTRING(255) := [
+		"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque bibendum mauris vel metus rutrum, sed gravida justo dignissim. Aenean et nisi cursus, auctor mi vel, posuere enim. Suspendisse ultricies mauris in finibus tristique. Nullam turpis duis.",
+		"",
+		"Proin tempor diam a felis fermentum, id molestie tortor pharetra. Phasellus condimentum rhoncus ultrices. Suspendisse ultricies nec neque quis sodales. In molestie vestibulum nulla eu gravida. Morbi orci ipsum, gravida elementum eros non, egestas egestas."
+	];
+	//LDATE_	: ARRAY[0..2] OF LDATE := [LD#2554-7-21];
+	//LDT_	: ARRAY[0..2] OF LDT := [LDT#2554-7-21-23:34:33.709551615];
+	//LTOD_	: ARRAY[0..2] OF LTOD := [LTOD#23:59:59.999999999];
+	LTIME_ 	: ARRAY[0..2] OF LTIME := [LTIME#213503D23H34M33S709MS551US615NS, LTIME#213503D23H34M33S709MS551US614NS, LTIME#0S];
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

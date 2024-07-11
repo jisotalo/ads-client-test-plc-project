@@ -3,11 +3,11 @@
   <DUT Name="U_Union" Id="{33ff04a7-14e0-4b70-9de6-628158e05b37}">
     <Declaration><![CDATA[TYPE U_Union :
 UNION
-	IntValue	: INT;
-	BoolValue	: BOOL;
-	UdintValue	: UDINT;
-	StringValue	: STRING;
-	RealValue	: real;
+	INT_	: INT;
+	BOOL_	: BOOL;
+	UDINT_	: UDINT;
+	STRING_	: STRING;
+	REAL_	: REAL;
 END_UNION
 END_TYPE
 ]]></Declaration>

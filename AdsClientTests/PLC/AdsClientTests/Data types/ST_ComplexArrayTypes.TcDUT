@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <DUT Name="ST_ComplexArrayTypes" Id="{d6b0a472-90ed-4d17-aaa5-1acb667a2d57}">
+    <Declaration><![CDATA[TYPE ST_ComplexArrayTypes :
+STRUCT
+	STRUCT_ 	: ARRAY[0..2] OF ST_StandardTypes;
+	STRUCT_2 	: ARRAY[0..2] OF ST_StandardArrayTypes;
+	ALIAS_ 		: ARRAY[0..2] OF StandardTypesAlias;
+	ENUM_		: ARRAY[0..2] OF E_Enum := [E_Enum.Running, E_Enum.Disabled, E_Enum.Stopping];
+	ENUM_2		: ARRAY[0..2] OF E_Enum := [E_Enum.Unknown, E_Enum.Disabled, E_Enum.Starting];
+	ENUM_3		: ARRAY[0..2] OF E_Enum := [5555, 0, E_Enum.Unknown];
+	ENUM_4		: ARRAY[0..2] OF E_LintEnum := [E_LintEnum.Negative, E_LintEnum.Zero, E_LintEnum.Positive];
+	ENUM_5		: ARRAY[0..2] OF (Implicit, Enum, Values, Go, Here) := [2, 0, 4];
+	POINTER_	: ARRAY[0..2] OF POINTER TO ST_StandardTypes;
+	//REFERENCE_	: ARRAY[0..2] OF REFERENCE TO ST_StandardTypes;
+	SUBRANGE_	: ARRAY[0..2] OF INT(-4095..4095) := [1234, 0, -1234];
+	UNION_		: ARRAY[0..2] OF U_Union := [
+		(STRING_ := 'A test string ääöö!!@@'),
+		(INT_ := 32767),
+		(REAL_ := 3.14)
+	]; 
+	BLOCK_		: ARRAY[0..2] OF FB_Block := [
+		(StrValue := 'First'),
+		(),
+		(StrValue := 'Third')
+	];
+	BLOCK_2		: ARRAY[0..2] OF TON := [(PT := T#2S500MS), (), (PT := T#123S)];
+	BLOCK_3		: ARRAY[0..2] OF TC2_System.FB_CreateDir := [
+		(sPathName := 'C:\Test'),
+		(),
+		(sPathName := 'C:\AnotherTest')
+	];
+	BLOCK_4		: ARRAY[0..2] OF Tc2_DataExchange.FB_ReadAdsSymByName := [
+		(sVarName := 'GVL_Test.Variable'),
+		(),
+		(sVarName := 'GVL_Test.AnotherVariable')
+	];
+	INTERFACE_	: ARRAY[0..2] OF I_Interface := [BLOCK_[0], 0, BLOCK_[2]];
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

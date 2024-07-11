@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.9">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <DUT Name="ST_PackMode8" Id="{9b2a4ccc-7add-49b2-a62e-d63a19d912c7}">
     <Declaration><![CDATA[{attribute 'pack_mode' := '8'}
 TYPE ST_PackMode8 :

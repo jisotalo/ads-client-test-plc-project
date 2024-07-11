@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <DUT Name="ST_Struct2" Id="{e4f1bf28-e42b-4644-8afb-815a2e815bfe}">
+    <Declaration><![CDATA[TYPE ST_Struct2 :
+STRUCT
+	BoolValue 	: BOOL := TRUE;
+	StringValue : STRING(27) := 'A string value';
+	LrealValue 	: LREAL := 12321.3123123;
+	BoolArray 	: ARRAY[1..5] OF BOOL := [TRUE, FALSE, TRUE, FALSE, TRUE];
+	SubStruct	: ST_Struct;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

@@ -1,15 +1,67 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.9">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <POU Name="PRG_Subscription" Id="{566e87ad-2ff3-47bb-b7ad-b791e069422f}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_Subscription
 VAR
+	tonUpdate10ms : ton;
+	tonUpdate100ms : ton;
+	tonUpdate1000ms : ton;
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[]]></ST>
+      <ST><![CDATA[//-------------------
+// 10 ms
+//-------------------
+tonUpdate10ms(
+	IN := TRUE,
+	PT := T#10MS
+);
+
+IF tonUpdate10ms.Q THEN
+	GVL_Subscription.NumericValue_10ms := GVL_Subscription.NumericValue_10ms + 1;
+
+	tonUpdate10ms(IN := FALSE);
+	tonUpdate10ms(IN := TRUE);
+END_IF
+
+//-------------------
+// 100 ms
+//-------------------
+tonUpdate100ms(
+	IN := TRUE,
+	PT := T#100MS
+);
+
+IF tonUpdate100ms.Q THEN
+	GVL_Subscription.NumericValue_100ms := GVL_Subscription.NumericValue_100ms + 1;
+
+	tonUpdate100ms(IN := FALSE);
+	tonUpdate100ms(IN := TRUE);
+END_IF
+
+//-------------------
+// 1000 ms
+//-------------------
+tonUpdate1000ms(
+	IN := TRUE,
+	PT := T#1000MS
+);
+
+IF tonUpdate1000ms.Q THEN
+	GVL_Subscription.NumericValue_1000ms := GVL_Subscription.NumericValue_1000ms + 1;
+
+	tonUpdate1000ms(IN := FALSE);
+	tonUpdate1000ms(IN := TRUE);
+END_IF]]></ST>
     </Implementation>
     <LineIds Name="PRG_Subscription">
-      <LineId Id="5" Count="0" />
+      <LineId Id="36" Count="0" />
+      <LineId Id="38" Count="0" />
+      <LineId Id="37" Count="0" />
+      <LineId Id="26" Count="9" />
+      <LineId Id="54" Count="14" />
+      <LineId Id="86" Count="14" />
+      <LineId Id="39" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>

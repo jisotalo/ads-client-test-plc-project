@@ -1,17 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.9">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <POU Name="PRG_AdsClientTests" Id="{d3e9ca6d-84a0-4f3a-9bdc-c7b060ad3f7f}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_AdsClientTests
 VAR
+	InitDone : bool;
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[GVL_AdsClientTests.IsRunning := TRUE;
+      <ST><![CDATA[IF NOT GVL_AdsClientTests.IsRunning THEN
+	MEMSET(ADR(GVL_Write.StandardTypes), 0, SIZEOF(GVL_Write.StandardTypes));
+	MEMSET(ADR(GVL_Write.StandardTypes), 0, SIZEOF(GVL_Write.StandardArrays));
+	MEMSET(ADR(GVL_Write.ComplexTypes), 0, SIZEOF(GVL_Write.ComplexTypes));
+	MEMSET(ADR(GVL_Write.ComplexArrayTypes), 0, SIZEOF(GVL_Write.ComplexArrayTypes));
+	MEMSET(ADR(GVL_Write.SpecialTypes), 0, SIZEOF(GVL_Write.SpecialTypes));
+	MEMSET(ADR(GVL_Write.IssueSpecificTypes), 0, SIZEOF(GVL_Write.IssueSpecificTypes));
+	
+	GVL_Write.ComplexTypes.POINTER_ := ADR(GVL_Write.StandardTypes);
+	GVL_Write.ComplexTypes.REFERENCE_ ref= GVL_Write.StandardTypes;
+	
+	GVL_AdsClientTests.IsRunning := TRUE;
+END_IF
 
 PRG_Subscription();]]></ST>
     </Implementation>
     <LineIds Name="PRG_AdsClientTests">
+      <LineId Id="15" Count="0" />
+      <LineId Id="18" Count="0" />
+      <LineId Id="20" Count="0" />
+      <LineId Id="22" Count="0" />
+      <LineId Id="29" Count="2" />
+      <LineId Id="36" Count="0" />
+      <LineId Id="38" Count="1" />
+      <LineId Id="24" Count="0" />
       <LineId Id="5" Count="0" />
+      <LineId Id="16" Count="0" />
       <LineId Id="10" Count="0" />
       <LineId Id="9" Count="0" />
     </LineIds>

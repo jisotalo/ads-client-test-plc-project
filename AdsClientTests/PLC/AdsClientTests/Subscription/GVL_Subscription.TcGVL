@@ -1,10 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.9">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <GVL Name="GVL_Subscription" Id="{ec6673ea-66c8-4cb2-a1d4-20a14c59190b}">
     <Declaration><![CDATA[{attribute 'qualified_only'}
 VAR_GLOBAL
-	IntValue           	: INT;
-	BoolValue			: bool;
+	NumericValue_10ms : INT;
+	NumericValue_100ms : INT;
+	NumericValue_1000ms : INT;
+	Numericvalue_Constant : INT := 12245;
+	
+	BoolValue			: BOOL;
 	StringValue       	: STRING;
 	StructValue     	: ST_Struct;
 END_VAR]]></Declaration>

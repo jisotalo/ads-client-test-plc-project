@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <DUT Name="ST_SpecialTypes" Id="{4e67e8d6-5a1e-4f09-805b-d0056fcc6955}">
+    <Declaration><![CDATA[TYPE ST_SpecialTypes :
+STRUCT
+	NegativeIndexArray		: ARRAY[-100..100] OF LREAL := [1.11, 99(0.0), 5.55, 99(0.0), 9.99];
+	MultiDimensionalArray	: ARRAY[1..3, 1..2] OF BYTE := [1, 2, 3, 4, 5, 6];
+	ArrayOfArrays			: ARRAY[1..3] OF ARRAY[1..2] OF SINT := [[-1, -2], [-3, -4], [-5, -6]];
+	
+	PackMode1		: ST_StandardTypes_PackMode1;
+	PackMode1_2		: ST_ComplexTypes_PackMode1;
+	PackMode8		: ST_StandardTypes_PackMode8;
+	PackMode8_2		: ST_ComplexTypes_PackMode8;
+	
+	EmptyBlock		: FB_EmptyBlock;
+	EmptyStruct		: ST_EmptyStruct;
+	EmptyArray 		: ARRAY[0..-1] OF BOOL; //How is this even possible..?
+	
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

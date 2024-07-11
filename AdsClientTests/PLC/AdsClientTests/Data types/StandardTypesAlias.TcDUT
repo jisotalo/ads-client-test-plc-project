@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <DUT Name="StandardTypesAlias" Id="{681ecb69-65b1-4329-a5eb-39829bd27c7f}">
+    <Declaration><![CDATA[TYPE StandardTypesAlias : ST_StandardTypes; END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <DUT Name="ST_StandardTypes" Id="{54370d72-d9ba-4730-b640-1dceeef24ebf}">
+    <Declaration><![CDATA[TYPE ST_StandardTypes :
+STRUCT
+	BOOL_ 	: BOOL := TRUE;
+	BOOL_2 	: BOOL := FALSE;
+	BYTE_ 	: BYTE := 255;
+	WORD_ 	: WORD := 65535;
+	DWORD_ 	: DWORD := 4294967295;
+	SINT_ 	: SINT := 127;
+	SINT_2 	: SINT := -128;
+	USINT_ 	: USINT := 255;
+	INT_ 	: INT := 32767;
+	INT_2 	: INT := -32768;
+	UINT_ 	: UINT := 65535;
+	DINT_ 	: DINT := 2147483647;
+	DINT_2 	: DINT := -2147483648;
+	UDINT_ 	: UDINT := 4294967295;
+	REAL_ 	: REAL := 3.4E38;
+	REAL_2 	: REAL := -3.4E38;
+	REAL_3 	: REAL := 75483.545;
+	REAL_4 	: REAL := -75483.545;
+	STRING_	: STRING := 'A test string ääöö!!@@';
+	STRING_2: STRING(255) := 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque bibendum mauris vel metus rutrum, sed gravida justo dignissim. Aenean et nisi cursus, auctor mi vel, posuere enim. Suspendisse ultricies mauris in finibus tristique. Nullam turpis duis.';
+	DATE_ 	: DATE := D#2106-02-06;
+	DT_ 	: DT := DT#2106-02-06-06:28:15;
+	DT_2 	: DATE_AND_TIME := DT#2106-02-06-06:28:15;
+	TOD_ 	: TOD := TO_TOD(4294967295);
+	TOD_2 	: TIME_OF_DAY := TO_TOD(4294967295);
+	TIME_ 	: TIME := T#49D17H2M47S295MS;
+	LWORD_	: LWORD := 18446744073709551615;
+	LINT_	: LINT := 9223372036854775807;
+	LINT_2	: LINT := -9223372036854775808;
+	ULINT_	: ULINT := 18446744073709551615;
+	LREAL_ 	: LREAL := 1.7E308;
+	LREAL_2 : LREAL := -1.7E308;
+	LREAL_3 : REAL := 75483.545;
+	LREAL_4 : REAL := -75483.545;
+	WSTRING_: WSTRING := "A test wstring ääöö!!@@ ẞẟΔش";
+	WSTRING_2: WSTRING(255) := "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque bibendum mauris vel metus rutrum, sed gravida justo dignissim. Aenean et nisi cursus, auctor mi vel, posuere enim. Suspendisse ultricies mauris in finibus tristique. Nullam turpis duis.";
+	//LDATE_	: LDATE := LD#2554-7-21;
+	//LDT_	: LDT := LDT#2554-7-21-23:34:33.709551615;
+	//LTOD_	: LTOD := LTOD#23:59:59.999999999;
+	LTIME_ 	: LTIME := LTIME#213503D23H34M33S709MS551US615NS;
+END_STRUCT
+END_TYPE]]></Declaration>
+  </DUT>
+</TcPlcObject>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <DUT Name="E_LintEnum" Id="{c6435ee2-ed17-42f6-b0e7-830a5c7a11db}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+//{attribute 'strict'}
+TYPE E_LintEnum :
+(
+	Negative := -9223372036854775808,
+	Zero := 0,
+	Positive := 9223372036854775807
+) LINT;
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

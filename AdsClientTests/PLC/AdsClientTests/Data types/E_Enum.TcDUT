@@ -1,14 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.9">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <DUT Name="E_Enum" Id="{ed11f8d8-3544-48ae-bc53-11cf6c7e2496}">
     <Declaration><![CDATA[{attribute 'qualified_only'}
-{attribute 'strict'}
+//{attribute 'strict'}
 TYPE E_Enum :
 (
 	Disabled 	:= 0,
 	Starting 	:= 50,
 	Running 	:= 100,
-	Stopping	:= 200	
+	Stopping	:= 200,
+	Unknown		:= -99
 );
 END_TYPE
 ]]></Declaration>

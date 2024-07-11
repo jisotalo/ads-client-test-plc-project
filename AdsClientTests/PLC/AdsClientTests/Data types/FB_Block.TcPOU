@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_Block" Id="{12fb5738-f1e6-4453-a55d-59197e24ab5a}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_Block IMPLEMENTS I_Interface
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+	StrValue : string;
+	Data : ST_StandardTypes;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <LineIds Name="FB_Block">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

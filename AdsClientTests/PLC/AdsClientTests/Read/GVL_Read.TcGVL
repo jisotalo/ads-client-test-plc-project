@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <GVL Name="GVL_Read" Id="{f608f62e-f8c1-4465-bc52-9ac3b9f68c5d}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+	StandardTypes 		: ST_StandardTypes;
+	StandardArrays 		: ST_StandardArrayTypes;
+	ComplexTypes		: ST_ComplexTypes := (
+		POINTER_ 	:= ADR(StandardTypes),
+		REFERENCE_ 	:= StandardTypes 
+	);
+	ComplexArrayTypes	: ST_ComplexArrayTypes;
+	SpecialTypes		: ST_SpecialTypes;
+	IssueSpecificTypes	: ST_IssueSpecificTypes;
+	
+	test : pvoid := ADR(SpecialTypes.EmptyBlock);
+	test2 : FB_EmptyBlock_1;
+	
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

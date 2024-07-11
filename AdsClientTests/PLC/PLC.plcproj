@@ -41,6 +41,42 @@ SOFTWARE</Description>
     <Author>Jussi Isotalo</Author>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="AdsClientTests\Data types\FB_Block.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AdsClientTests\Data types\FB_EmptyBlock.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AdsClientTests\Data types\FB_EmptyBlock_1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AdsClientTests\Data types\I_Interface.TcIO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AdsClientTests\Data types\ST_ComplexTypes_PackMode1.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AdsClientTests\Data types\ST_ComplexTypes_PackMode8.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AdsClientTests\Data types\ST_EmptyStruct.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AdsClientTests\Data types\ST_IssueSpecificTypes.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AdsClientTests\Data types\ST_SpecialTypes.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AdsClientTests\Data types\ST_StandardTypes_PackMode1.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AdsClientTests\Data types\ST_StandardTypes_PackMode8.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AdsClientTests\Data types\ST_ComplexArrayTypes.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="AdsClientTests\GVL_AdsClientTests.TcGVL">
       <SubType>Code</SubType>
       <LinkAlways>true</LinkAlways>
@@ -48,7 +84,7 @@ SOFTWARE</Description>
     <Compile Include="AdsClientTests\PRG_AdsClientTests.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="AdsClientTests\Reading and Writing\GVL_ReadingAndWriting.TcGVL">
+    <Compile Include="AdsClientTests\Read\GVL_Read.TcGVL">
       <SubType>Code</SubType>
       <LinkAlways>true</LinkAlways>
     </Compile>
@@ -73,25 +109,47 @@ SOFTWARE</Description>
     <Compile Include="AdsClientTests\Symbols and datatypes\ST_TestDataType.TcDUT">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="AdsClientTests\_Data types etc\E_Enum.TcDUT">
+    <Compile Include="AdsClientTests\Data types\E_Enum.TcDUT">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="AdsClientTests\_Data types etc\ST_Struct.TcDUT">
+    <Compile Include="AdsClientTests\Data types\E_LintEnum.TcDUT">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="AdsClientTests\_Data types etc\ST_Issue94.TcDUT">
+    <Compile Include="AdsClientTests\Data types\StandardTypesAlias.TcDUT">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="AdsClientTests\_Data types etc\ST_Issue94_Byte.TcDUT">
+    <Compile Include="AdsClientTests\Data types\ST_StandardTypes.TcDUT">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="AdsClientTests\_Data types etc\ST_PackMode1.TcDUT">
+    <Compile Include="AdsClientTests\Data types\ST_StandardArrayTypes.TcDUT">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="AdsClientTests\_Data types etc\ST_PackMode8.TcDUT">
+    <Compile Include="AdsClientTests\Data types\ST_ComplexTypes.TcDUT">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="AdsClientTests\_Data types etc\U_Union.TcDUT">
+    <Compile Include="AdsClientTests\Data types\U_Union.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AdsClientTests\Write\GVL_Write.TcGVL">
+      <SubType>Code</SubType>
+      <LinkAlways>true</LinkAlways>
+    </Compile>
+    <Compile Include="AdsClientTests\_OLD\ST_Issue94.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AdsClientTests\_OLD\ST_Issue94_Byte.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AdsClientTests\_OLD\ST_PackMode1.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AdsClientTests\_OLD\ST_PackMode8.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AdsClientTests\_OLD\ST_Struct.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AdsClientTests\_OLD\ST_Struct2.TcDUT">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="PlcTask.TcTTO">
@@ -121,11 +179,13 @@ SOFTWARE</Description>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AdsClientTests" />
+    <Folder Include="AdsClientTests\_OLD" />
+    <Folder Include="AdsClientTests\Write" />
     <Folder Include="AdsClientTests\Symbols and datatypes" />
     <Folder Include="AdsClientTests\Subscription" />
     <Folder Include="AdsClientTests\RPC" />
-    <Folder Include="AdsClientTests\_Data types etc" />
-    <Folder Include="AdsClientTests\Reading and Writing" />
+    <Folder Include="AdsClientTests\Data types" />
+    <Folder Include="AdsClientTests\Read" />
   </ItemGroup>
   <ItemGroup>
     <None Include="PLC.tmc">

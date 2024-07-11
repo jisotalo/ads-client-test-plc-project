@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <DUT Name="ST_ComplexTypes" Id="{a2839fe0-d623-42bd-b505-5390b7ad1302}">
+    <Declaration><![CDATA[TYPE ST_ComplexTypes :
+STRUCT
+	STRUCT_ 	: ST_StandardTypes;
+	STRUCT_2 	: ST_StandardArrayTypes;
+	ALIAS_ 		: StandardTypesAlias;
+	ENUM_		: E_Enum := E_Enum.Running;
+	ENUM_2		: E_Enum := E_Enum.Unknown;
+	ENUM_3		: E_Enum := 5555; //Not a valid value
+	ENUM_4		: E_LintEnum := E_LintEnum.Negative;
+	ENUM_5		: (Implicit, Enum, Values, Go, Here) := Values;
+	POINTER_	: POINTER TO ST_StandardTypes;
+	REFERENCE_	: REFERENCE TO ST_StandardTypes;
+	SUBRANGE_	: INT(-4095..4095) := 1234;
+	UNION_		: U_Union := (STRING_ := 'A test string ääöö!!@@'); 
+	UNION_2		: U_Union := (INT_ := 32767); 
+	UNION_3		: U_Union := (REAL_ := 3.14);
+	BLOCK_		: FB_Block;
+	BLOCK_2		: TON := (PT := T#2S500MS);
+	BLOCK_3		: TC2_System.FB_CreateDir := (sPathName := 'C:\Test');
+	BLOCK_4		: Tc2_DataExchange.FB_ReadAdsSymByName := (sVarName := 'GVL_Test.Variable');
+	INTERFACE_	: I_Interface := BLOCK_;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>
