@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <POU Name="FB_Rpc" Id="{85a5d823-5c41-4c26-a181-82a08e3d478f}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_Rpc
+    <Declaration><![CDATA[{attribute 'ads-client-attribute' := 'example-value-ääö'}; 
+FUNCTION_BLOCK FB_Rpc
 VAR_INPUT
 END_VAR
 VAR_OUTPUT
@@ -40,17 +41,29 @@ ELSE
 END_IF]]></ST>
       </Implementation>
     </Method>
-    <Method Name="StructTest" Id="{6ef4d474-76c0-4d34-920e-b9c2c4860978}">
+    <Method Name="NoParameters" Id="{5f26e085-243a-4ffb-8b71-911d8a88a392}">
       <Declaration><![CDATA[{attribute 'TcRpcEnable'}
-METHOD StructTest : ST_Struct
+{attribute 'ads-client-attribute' := 'example-value-ääö'}; 
+METHOD NoParameters
 VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="Structs" Id="{6ef4d474-76c0-4d34-920e-b9c2c4860978}">
+      <Declaration><![CDATA[{attribute 'TcRpcEnable'}
+METHOD Structs : ST_Struct
+VAR_INPUT
+	{attribute 'ads-client-attribute' := 'example-value-ääö'}; 
 	Input	: ST_Struct;
 END_VAR
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[StructTest.SomeText := CONCAT('Response: ', Input.SomeText);
-StructTest.SomeReal := Input.SomeReal * 10.0;
-StructTest.SomeDate := Input.SomeDate + T#24H;]]></ST>
+        <ST><![CDATA[Structs.SomeText := CONCAT('Response: ', Input.SomeText);
+Structs.SomeReal := Input.SomeReal * 10.0;
+Structs.SomeDate := Input.SomeDate + T#24H;]]></ST>
       </Implementation>
     </Method>
     <LineIds Name="FB_Rpc">
@@ -69,7 +82,10 @@ StructTest.SomeDate := Input.SomeDate + T#24H;]]></ST>
       <LineId Id="24" Count="0" />
       <LineId Id="19" Count="1" />
     </LineIds>
-    <LineIds Name="FB_Rpc.StructTest">
+    <LineIds Name="FB_Rpc.NoParameters">
+      <LineId Id="8" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_Rpc.Structs">
       <LineId Id="5" Count="0" />
       <LineId Id="7" Count="1" />
     </LineIds>

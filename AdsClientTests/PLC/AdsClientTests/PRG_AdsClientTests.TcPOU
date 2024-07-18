@@ -3,7 +3,8 @@
   <POU Name="PRG_AdsClientTests" Id="{d3e9ca6d-84a0-4f3a-9bdc-c7b060ad3f7f}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_AdsClientTests
 VAR
-	InitDone : bool;
+	InitDone : BOOL;
+	
 END_VAR
 ]]></Declaration>
     <Implementation>
