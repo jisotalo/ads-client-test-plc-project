@@ -16,6 +16,7 @@ STRUCT
 	EmptyStruct		: ST_EmptyStruct;
 	EmptyArray 		: ARRAY[0..-1] OF BOOL; //How is this even possible..?
 	
+	Bits			: ST_Bits;
 END_STRUCT
 END_TYPE
 ]]></Declaration>

@@ -53,6 +53,9 @@ SOFTWARE</Description>
     <Compile Include="AdsClientTests\Data types\I_Interface.TcIO">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="AdsClientTests\Data types\ST_Bits.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="AdsClientTests\Data types\ST_ComplexTypes_PackMode1.TcDUT">
       <SubType>Code</SubType>
     </Compile>

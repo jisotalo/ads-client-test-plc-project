@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <DUT Name="ST_Bits" Id="{722edd29-26a2-483d-9adf-04d6d9fff280}">
+    <Declaration><![CDATA[TYPE ST_Bits :
+STRUCT
+	Bit_0 : BIT := TRUE;
+	Bit_1 : BIT := FALSE;
+	Bit_2 : BIT := FALSE;
+	Bit_3 : BIT := TRUE;
+	Bit_4 : BIT := TRUE;
+	Bit_5 : BIT := FALSE;
+	Bit_6 : BIT := FALSE;
+	Bit_7 : BIT := TRUE;
+	
+	Bit_8 : BIT := FALSE;
+	Bit_9 : BIT := TRUE;
+	Bit_10 : BIT := TRUE;
+	Bit_11 : BIT := FALSE;
+	Bit_12 : BIT := FALSE;
+	Bit_13 : BIT := TRUE;
+	Bit_14 : BIT := TRUE;
+	Bit_15 : BIT := FALSE;
+	
+	REAL_ : REAL := 3.14;
+	
+	Bit_16 : BIT := TRUE;
+	Bit_17 : BIT := TRUE;
+	Bit_18 : BIT := FALSE;
+	Bit_19 : BIT := TRUE;
+	Bit_20 : BIT := TRUE;
+	Bit_21 : BIT := FALSE;
+	Bit_22 : BIT := FALSE;
+	Bit_23 : BIT := TRUE;
+	
+	Bit_24 : BIT := TRUE;
+	Bit_25 : BIT := FALSE;
+	Bit_26 : BIT := TRUE;
+	Bit_27 : BIT := TRUE;
+	Bit_28 : BIT := FALSE;
+	Bit_29 : BIT := TRUE;
+	Bit_30 : BIT := TRUE;
+	Bit_31 : BIT := FALSE;
+	
+	Bit_32 : BIT := true;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>
