@@ -7,6 +7,7 @@ VAR_GLOBAL
 	IsReset 		: BOOL := TRUE;
 	IsTestProject 	: BOOL := TRUE;
 	IsRunning 		: BOOL;
+	TestPointer 	: POINTER TO BOOL; //For 32/64bit check
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>

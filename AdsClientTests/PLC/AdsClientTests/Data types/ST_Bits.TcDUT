@@ -41,7 +41,7 @@ STRUCT
 	Bit_30 : BIT := TRUE;
 	Bit_31 : BIT := FALSE;
 	
-	Bit_32 : BIT := true;
+	Bit_32 : BIT := TRUE;
 END_STRUCT
 END_TYPE
 ]]></Declaration>
