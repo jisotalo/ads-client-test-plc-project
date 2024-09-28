@@ -12,3 +12,5 @@ PLC project for TwinCAT is located in `./TwinCAT 3/` directory.
 PLC project for TwinCAT is located in `./TwinCAT 2/` directory. It has been created for CX9020 with TwinCAT 2 image.
 
 This project is based on TC3 project, but all unsupported stuff is removed.
+
+`EXPORT` directory contains all files exported to support version control.
