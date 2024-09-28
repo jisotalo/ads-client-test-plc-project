@@ -1,0 +1,11 @@
+(* @NESTEDCOMMENTS := 'Yes' *)
+(* @PATH := '' *)
+(* @OBJECTFLAGS := '0, 8' *)
+(*Test comment הההצצ*)
+TYPE ST_TestDataType :
+STRUCT
+	Member : ST_Struct;
+END_STRUCT
+END_TYPE
+
+(* @END_DECLARATION := '0' *)

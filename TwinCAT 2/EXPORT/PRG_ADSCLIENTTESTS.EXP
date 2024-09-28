@@ -1,0 +1,94 @@
+
+(* @NESTEDCOMMENTS := 'Yes' *)
+(* @PATH := '' *)
+(* @OBJECTFLAGS := '0, 8' *)
+(* @SYMFILEFLAGS := '2048' *)
+PROGRAM PRG_AdsClientTests
+VAR
+	InitDone : BOOL;
+
+	TOD_0: TOD;
+	TOD_MAX : TOD;
+	TOD_MAX_MINUS_1 : TOD;
+END_VAR
+(* @END_DECLARATION := '0' *)
+IF NOT IsRunning THEN
+	(*Need to do some initializing here unlike in TC3*)
+	TOD_0 := DWORD_TO_TOD(0);
+	TOD_MAX := DWORD_TO_TOD(4294967295);
+	TOD_MAX_MINUS_1 := DWORD_TO_TOD(4294967294);
+
+	StandardArrays.TOD_[0] := TOD_MAX;
+	StandardArrays.TOD_[1] := TOD_MAX_MINUS_1;
+	StandardArrays.TOD_[2] := TOD_0;
+	StandardArrays.TOD_2[0] := TOD_MAX;
+	StandardArrays.TOD_2[1] := TOD_MAX_MINUS_1;
+	StandardArrays.TOD_2[2] := TOD_0;
+
+	StandardTypes.TOD_ := TOD_MAX;
+	StandardTypes.TOD_2 := TOD_MAX;
+
+	ComplexTypes.POINTER_ := ADR(StandardTypes);
+
+	ComplexTypes.BLOCK_.Data.TOD_  := TOD_MAX;
+	ComplexTypes.BLOCK_.Data.TOD_2  := ComplexTypes.BLOCK_.Data.TOD_;
+
+	ComplexTypes.ALIAS_.TOD_  := ComplexTypes.BLOCK_.Data.TOD_;
+	ComplexTypes.ALIAS_.TOD_2  := ComplexTypes.BLOCK_.Data.TOD_;
+
+	ComplexTypes.STRUCT_.TOD_  := ComplexTypes.BLOCK_.Data.TOD_;
+	ComplexTypes.STRUCT_.TOD_2  := ComplexTypes.BLOCK_.Data.TOD_;
+
+	ComplexTypes.STRUCT_2.TOD_[0]  := TOD_MAX;
+	ComplexTypes.STRUCT_2.TOD_[1]  := TOD_MAX_MINUS_1;
+	ComplexTypes.STRUCT_2.TOD_[2]  := TOD_0;
+	ComplexTypes.STRUCT_2.TOD_2[0]  := TOD_MAX;
+	ComplexTypes.STRUCT_2.TOD_2[1]  := TOD_MAX_MINUS_1;
+	ComplexTypes.STRUCT_2.TOD_2[2]  := TOD_0;
+
+	ComplexArrayTypes.BLOCK_[0].Data.TOD_  := TOD_MAX;
+	ComplexArrayTypes.BLOCK_[0].Data.TOD_2  := TOD_MAX;
+	ComplexArrayTypes.BLOCK_[1].Data.TOD_  := TOD_MAX;
+	ComplexArrayTypes.BLOCK_[1].Data.TOD_2  := TOD_MAX;
+	ComplexArrayTypes.BLOCK_[2].Data.TOD_  := TOD_MAX;
+	ComplexArrayTypes.BLOCK_[2].Data.TOD_2  := TOD_MAX;
+
+	ComplexArrayTypes.ALIAS_[0].TOD_  := TOD_MAX;
+	ComplexArrayTypes.ALIAS_[0].TOD_2  := TOD_MAX;
+	ComplexArrayTypes.ALIAS_[1].TOD_  := TOD_MAX;
+	ComplexArrayTypes.ALIAS_[1].TOD_2  := TOD_MAX;
+	ComplexArrayTypes.ALIAS_[2].TOD_  := TOD_MAX;
+	ComplexArrayTypes.ALIAS_[2].TOD_2  := TOD_MAX;
+
+	ComplexArrayTypes.STRUCT_[0].TOD_  := TOD_MAX;
+	ComplexArrayTypes.STRUCT_[0].TOD_2  := TOD_MAX;
+	ComplexArrayTypes.STRUCT_[1].TOD_  := TOD_MAX;
+	ComplexArrayTypes.STRUCT_[1].TOD_2  := TOD_MAX;
+	ComplexArrayTypes.STRUCT_[2].TOD_  := TOD_MAX;
+	ComplexArrayTypes.STRUCT_[2].TOD_2  := TOD_MAX;
+
+	ComplexArrayTypes.STRUCT_2[0].TOD_[0]  := TOD_MAX;
+	ComplexArrayTypes.STRUCT_2[0].TOD_[1]  := TOD_MAX_MINUS_1;
+	ComplexArrayTypes.STRUCT_2[0].TOD_[2]  := TOD_0;
+	ComplexArrayTypes.STRUCT_2[0].TOD_2[0]  := TOD_MAX;
+	ComplexArrayTypes.STRUCT_2[0].TOD_2[1]  := TOD_MAX_MINUS_1;
+	ComplexArrayTypes.STRUCT_2[0].TOD_2[2]  := TOD_0;
+
+	ComplexArrayTypes.STRUCT_2[1] := ComplexArrayTypes.STRUCT_2[0];
+	ComplexArrayTypes.STRUCT_2[2] := ComplexArrayTypes.STRUCT_2[0];
+
+	MEMSET(ADR(Write_StandardTypes), 0, SIZEOF(Write_StandardTypes));
+	MEMSET(ADR(Write_StandardTypes), 0, SIZEOF(Write_StandardArrays));
+	MEMSET(ADR(Write_ComplexTypes), 0, SIZEOF(Write_ComplexTypes));
+	MEMSET(ADR(Write_ComplexArrayTypes), 0, SIZEOF(Write_ComplexArrayTypes));
+	MEMSET(ADR(Write_SpecialTypes), 0, SIZEOF(Write_SpecialTypes));
+	MEMSET(ADR(Write_IssueSpecificTypes), 0, SIZEOF(Write_IssueSpecificTypes));
+
+	Write_ComplexTypes.POINTER_ := ADR(Write_StandardTypes);
+	
+	IsRunning := TRUE;
+END_IF
+
+PRG_Subscription();
+
+END_PROGRAM

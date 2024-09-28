@@ -1,0 +1,21 @@
+(* @NESTEDCOMMENTS := 'Yes' *)
+(* @GLOBAL_VARIABLE_LIST := 'GVL_Write' *)
+(* @PATH := '\/AdsClientTests' *)
+(* @OBJECTFLAGS := '0, 8' *)
+(* @SYMFILEFLAGS := '2048' *)
+VAR_GLOBAL
+	Write_StandardTypes 		: ST_StandardTypes;
+	Write_StandardArrays 		: ST_StandardArrayTypes;
+	Write_ComplexTypes		: ST_ComplexTypes;
+	Write_ComplexArrayTypes	: ST_ComplexArrayTypes;
+	Write_SpecialTypes		: ST_SpecialTypes;
+	Write_IssueSpecificTypes	: ST_IssueSpecificTypes;
+END_VAR
+
+(* @OBJECT_END := 'GVL_Write' *)
+(* @CONNECTIONS := GVL_Write
+FILENAME : ''
+FILETIME : 0
+EXPORT : 0
+NUMOFCONNECTIONS : 0
+*)

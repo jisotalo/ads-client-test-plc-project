@@ -6,6 +6,6 @@ STRUCT
 	BoolValue 	: bool := TRUE;
 	ArrayValue 	:  ARRAY [0..1] OF ST_Issue94_Byte := [(ByteValue := 1), (ByteValue := 2)];
 END_STRUCT
-END_TYPE]]></Declaration>
+END_TYPE	 ]]></Declaration>
   </DUT>
 </TcPlcObject>

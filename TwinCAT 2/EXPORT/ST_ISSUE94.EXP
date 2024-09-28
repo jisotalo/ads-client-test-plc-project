@@ -1,0 +1,10 @@
+(* @NESTEDCOMMENTS := 'Yes' *)
+(* @PATH := '' *)
+(* @OBJECTFLAGS := '0, 8' *)
+TYPE ST_Issue94 :
+STRUCT
+	BoolValue 	: BOOL := TRUE;
+	ArrayValue 	:  ARRAY [0..1] OF ST_Issue94_Byte := (ByteValue := 1), (ByteValue := 2);
+END_STRUCT
+END_TYPE
+(* @END_DECLARATION := '0' *)

@@ -80,6 +80,9 @@ SOFTWARE</Description>
     <Compile Include="AdsClientTests\Data types\ST_ComplexArrayTypes.TcDUT">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="AdsClientTests\Data types\ST_Struct.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="AdsClientTests\GVL_AdsClientTests.TcGVL">
       <SubType>Code</SubType>
       <LinkAlways>true</LinkAlways>
@@ -147,9 +150,6 @@ SOFTWARE</Description>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="AdsClientTests\_OLD\ST_PackMode8.TcDUT">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="AdsClientTests\_OLD\ST_Struct.TcDUT">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="AdsClientTests\_OLD\ST_Struct2.TcDUT">

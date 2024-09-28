@@ -1,0 +1,38 @@
+(* @NESTEDCOMMENTS := 'Yes' *)
+(* @PATH := '' *)
+(* @OBJECTFLAGS := '0, 8' *)
+TYPE ST_StandardTypes :
+STRUCT
+	BOOL_ 	: BOOL := TRUE;
+	BOOL_2 	: BOOL := FALSE;
+	BYTE_ 	: BYTE := 255;
+	WORD_ 	: WORD := 65535;
+	DWORD_ 	: DWORD := 4294967295;
+	SINT_ 	: SINT := 127;
+	SINT_2 	: SINT := -128;
+	USINT_ 	: USINT := 255;
+	INT_ 	: INT := 32767;
+	INT_2 	: INT := -32768;
+	UINT_ 	: UINT := 65535;
+	DINT_ 	: DINT := 2147483647;
+	DINT_2 	: DINT := -2147483648;
+	UDINT_ 	: UDINT := 4294967295;
+	REAL_ 	: REAL := 3.4E38;
+	REAL_2 	: REAL := -3.4E38;
+	REAL_3 	: REAL := 75483.545;
+	REAL_4 	: REAL := -75483.545;
+	STRING_	: STRING := 'A test string ההצצ!!@@';
+	STRING_2: STRING(255) := 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque bibendum mauris vel metus rutrum, sed gravida justo dignissim. Aenean et nisi cursus, auctor mi vel, posuere enim. Suspendisse ultricies mauris in finibus tristique. Nullam turpis duis.';
+	DATE_ 	: DATE := D#2106-02-06;
+	DT_ 	: DT := DT#2106-02-06-06:28:15;
+	DT_2 	: DATE_AND_TIME := DT#2106-02-06-06:28:15;
+	TOD_ 	: TOD;
+	TOD_2 	: TIME_OF_DAY;
+	TIME_ 	: TIME := T#49D17H2M47S295MS;
+	LREAL_ 	: LREAL := 1.7E308;
+	LREAL_2 : LREAL := -1.7E308;
+	LREAL_3 : REAL := 75483.545;
+	LREAL_4 : REAL := -75483.545;
+END_STRUCT
+END_TYPE
+(* @END_DECLARATION := '0' *)

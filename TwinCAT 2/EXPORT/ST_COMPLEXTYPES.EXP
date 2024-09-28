@@ -1,0 +1,21 @@
+(* @NESTEDCOMMENTS := 'Yes' *)
+(* @PATH := '' *)
+(* @OBJECTFLAGS := '0, 8' *)
+TYPE ST_ComplexTypes :
+STRUCT
+	STRUCT_ 	: ST_StandardTypes;
+	STRUCT_2 	: ST_StandardArrayTypes;
+	ALIAS_ 		: StandardTypesAlias;
+	ENUM_		: E_Enum := Running;
+	ENUM_2		: E_Enum := Unknown;
+	ENUM_3		: E_Enum := 5555; (*//Not a valid value*)
+	POINTER_	: POINTER TO ST_StandardTypes;
+	SUBRANGE_	: INT(-4095..4095) := 1234;
+	BLOCK_		: FB_Block;
+	BLOCK_2	: TON := (PT := T#2S500MS);
+	BLOCK_3	: FB_CreateDir := (sPathName := 'C:\Test');
+	BLOCK_4	: FB_ReadAdsSymByName := (sVarName := 'GVL_Test.Variable');
+END_STRUCT
+END_TYPE
+
+(* @END_DECLARATION := '0' *)

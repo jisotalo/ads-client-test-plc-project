@@ -1,0 +1,33 @@
+(* @NESTEDCOMMENTS := 'Yes' *)
+(* @PATH := '' *)
+(* @OBJECTFLAGS := '0, 8' *)
+TYPE ST_ComplexArrayTypes :
+STRUCT
+	STRUCT_ 	: ARRAY[0..2] OF ST_StandardTypes;
+	STRUCT_2 	: ARRAY[0..2] OF ST_StandardArrayTypes;
+	ALIAS_ 		: ARRAY[0..2] OF StandardTypesAlias;
+	ENUM_		: ARRAY[0..2] OF E_Enum := Running, Disabled, Stopping;
+	ENUM_2		: ARRAY[0..2] OF E_Enum := Unknown, Disabled, Starting;
+	ENUM_3		: ARRAY[0..2] OF E_Enum :=5555, 0, Unknown;
+	POINTER_	: ARRAY[0..2] OF POINTER TO ST_StandardTypes;
+	SUBRANGE_	: ARRAY[0..2] OF INT(-4095..4095) := 1234, 0, -1234;
+	BLOCK_		: ARRAY[0..2] OF FB_Block :=
+		(StrValue := 'First'),
+		(StrValue := ''),
+		(StrValue := 'Third')
+	;
+	BLOCK_2		: ARRAY[0..2] OF TON := (PT := T#2S500MS), (), (PT := T#123S);
+	BLOCK_3		: ARRAY[0..2] OF FB_CreateDir :=
+		(sPathName := 'C:\Test'),
+		(),
+		(sPathName := 'C:\AnotherTest')
+	;
+	BLOCK_4		: ARRAY[0..2] OF FB_ReadAdsSymByName :=
+		(sVarName := 'GVL_Test.Variable'),
+		(),
+		(sVarName := 'GVL_Test.AnotherVariable')
+	;
+END_STRUCT
+END_TYPE
+
+(* @END_DECLARATION := '0' *)

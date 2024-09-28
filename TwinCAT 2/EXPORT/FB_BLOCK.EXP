@@ -1,0 +1,19 @@
+
+(* @NESTEDCOMMENTS := 'Yes' *)
+(* @PATH := '' *)
+(* @OBJECTFLAGS := '0, 8' *)
+(* @SYMFILEFLAGS := '2048' *)
+(*Variables in inputs so that they can be written from outside*)
+FUNCTION_BLOCK FB_Block
+VAR_INPUT
+	StrValue : STRING;
+	Data : ST_StandardTypes;
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+END_VAR
+
+(* @END_DECLARATION := '0' *)
+;
+END_FUNCTION_BLOCK

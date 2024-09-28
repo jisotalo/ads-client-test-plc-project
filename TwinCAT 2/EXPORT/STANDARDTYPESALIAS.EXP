@@ -1,0 +1,6 @@
+(* @NESTEDCOMMENTS := 'Yes' *)
+(* @PATH := '' *)
+(* @OBJECTFLAGS := '0, 8' *)
+TYPE StandardTypesAlias : ST_StandardTypes; END_TYPE
+
+(* @END_DECLARATION := '0' *)

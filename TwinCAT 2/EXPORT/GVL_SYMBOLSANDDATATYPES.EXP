@@ -1,0 +1,17 @@
+(* @NESTEDCOMMENTS := 'Yes' *)
+(* @GLOBAL_VARIABLE_LIST := 'GVL_SymbolsAndDataTypes' *)
+(* @PATH := '\/AdsClientTests' *)
+(* @OBJECTFLAGS := '0, 8' *)
+(* @SYMFILEFLAGS := '2048' *)
+VAR_GLOBAL PERSISTENT
+	TestSymbol : STRING(82) := 'Some test value';(*Test comment הההצצ*)
+	TestDataType : ST_TestDataType;
+END_VAR
+
+(* @OBJECT_END := 'GVL_SymbolsAndDataTypes' *)
+(* @CONNECTIONS := GVL_SymbolsAndDataTypes
+FILENAME : ''
+FILETIME : 0
+EXPORT : 0
+NUMOFCONNECTIONS : 0
+*)

@@ -1,0 +1,12 @@
+(* @NESTEDCOMMENTS := 'Yes' *)
+(* @PATH := '' *)
+(* @OBJECTFLAGS := '0, 8' *)
+TYPE ST_Struct :
+STRUCT
+	SomeText : STRING(50) := 'Hello ads-client';
+	SomeReal : REAL := 3.14159265359;
+	SomeDate : DT := DT#2020-4-13-12:25:33;
+END_STRUCT
+END_TYPE
+
+(* @END_DECLARATION := '0' *)

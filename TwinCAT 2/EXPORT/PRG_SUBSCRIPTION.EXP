@@ -1,0 +1,57 @@
+
+(* @NESTEDCOMMENTS := 'Yes' *)
+(* @PATH := '' *)
+(* @OBJECTFLAGS := '0, 8' *)
+(* @SYMFILEFLAGS := '2048' *)
+PROGRAM PRG_Subscription
+VAR
+	tonUpdate10ms : ton;
+	tonUpdate100ms : ton;
+	tonUpdate1000ms : TON;
+END_VAR
+(* @END_DECLARATION := '0' *)
+(*//-------------------
+// 10 ms
+//-------------------*)
+tonUpdate10ms(
+	IN := TRUE,
+	PT := T#10MS
+);
+
+IF tonUpdate10ms.Q THEN
+	NumericValue_10ms := NumericValue_10ms + 1;
+
+	tonUpdate10ms(IN := FALSE);
+	tonUpdate10ms(IN := TRUE);
+END_IF
+
+(*//-------------------
+// 100 ms
+//-------------------*)
+tonUpdate100ms(
+	IN := TRUE,
+	PT := T#100MS
+);
+
+IF tonUpdate100ms.Q THEN
+	NumericValue_100ms := NumericValue_100ms + 1;
+
+	tonUpdate100ms(IN := FALSE);
+	tonUpdate100ms(IN := TRUE);
+END_IF
+
+(*//-------------------
+// 1000 ms
+//-------------------*)
+tonUpdate1000ms(
+	IN := TRUE,
+	PT := T#1000MS
+);
+
+IF tonUpdate1000ms.Q THEN
+	NumericValue_1000ms := NumericValue_1000ms + 1;
+
+	tonUpdate1000ms(IN := FALSE);
+	tonUpdate1000ms(IN := TRUE);
+END_IF
+END_PROGRAM

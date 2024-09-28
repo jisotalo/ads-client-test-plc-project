@@ -1,0 +1,14 @@
+(* @NESTEDCOMMENTS := 'Yes' *)
+(* @PATH := '' *)
+(* @OBJECTFLAGS := '0, 8' *)
+TYPE E_Enum :
+(
+	Disabled 	:= 0,
+	Starting 		:= 50,
+	Running 		:= 100,
+	Stopping		:= 200,
+	Unknown		:= -99
+);
+END_TYPE
+
+(* @END_DECLARATION := '0' *)

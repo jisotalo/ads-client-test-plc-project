@@ -8,6 +8,7 @@ VAR_GLOBAL
 	IsTestProject 	: BOOL := TRUE;
 	IsRunning 		: BOOL;
 	TestPointer 	: POINTER TO BOOL; //For 32/64bit check
+	IsTc2 			: BOOL := FALSE;
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>

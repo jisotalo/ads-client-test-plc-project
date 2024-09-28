@@ -1,0 +1,21 @@
+(* @NESTEDCOMMENTS := 'Yes' *)
+(* @GLOBAL_VARIABLE_LIST := 'GVL_AdsClientTests' *)
+(* @PATH := '\/AdsClientTests' *)
+(* @OBJECTFLAGS := '0, 8' *)
+(* @SYMFILEFLAGS := '2048' *)
+VAR_GLOBAL
+	VERSION	: STRING := '2.0.0';
+	IsReset 		: BOOL := TRUE;
+	IsTestProject 	: BOOL := TRUE;
+	IsRunning 	: BOOL;
+	TestPointer 	: POINTER TO BOOL; (*//FOR 32/64bit check*)
+	IsTc2 		: BOOL := TRUE;
+END_VAR
+
+(* @OBJECT_END := 'GVL_AdsClientTests' *)
+(* @CONNECTIONS := GVL_AdsClientTests
+FILENAME : ''
+FILETIME : 0
+EXPORT : 0
+NUMOFCONNECTIONS : 0
+*)

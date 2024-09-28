@@ -7,10 +7,6 @@ VAR_GLOBAL
 	NumericValue_100ms : INT;
 	NumericValue_1000ms : INT;
 	Numericvalue_Constant : INT := 12245;
-	
-	BoolValue			: BOOL;
-	StringValue       	: STRING;
-	StructValue     	: ST_Struct;
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>

@@ -1,0 +1,19 @@
+(* @NESTEDCOMMENTS := 'Yes' *)
+(* @GLOBAL_VARIABLE_LIST := 'GVL_Subscription' *)
+(* @PATH := '\/AdsClientTests' *)
+(* @OBJECTFLAGS := '0, 8' *)
+(* @SYMFILEFLAGS := '2048' *)
+VAR_GLOBAL
+	NumericValue_10ms		 : INT;
+	NumericValue_100ms 		: INT;
+	NumericValue_1000ms 	: INT;
+	Numericvalue_Constant	: INT := 12245;
+END_VAR
+
+(* @OBJECT_END := 'GVL_Subscription' *)
+(* @CONNECTIONS := GVL_Subscription
+FILENAME : ''
+FILETIME : 0
+EXPORT : 0
+NUMOFCONNECTIONS : 0
+*)
