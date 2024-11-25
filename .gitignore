@@ -39,7 +39,7 @@ packages/
 # TwinCAT files
 *.tpy
 *.tclrs
-*.compiled-library
+#*.compiled-library
 *.compileinfo
 # Don't include the tmc-file rule if either of the following is true:
 #   1. You've got TwinCAT C++ projects, as the information in the TMC-file is created manually for the C++ projects (in that case, only (manually) ignore the tmc-files for the PLC projects)
