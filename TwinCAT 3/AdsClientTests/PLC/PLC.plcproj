@@ -41,6 +41,9 @@ SOFTWARE</Description>
     <Author>Jussi Isotalo</Author>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="AdsClientTests\Data types\E_ExtendedEnum.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="AdsClientTests\Data types\FB_Block.TcPOU">
       <SubType>Code</SubType>
     </Compile>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <DUT Name="E_ExtendedEnum" Id="{c6e3a6c0-391c-4b55-b8dc-1b2f751cb51c}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+//{attribute 'strict'}
+//This enum works differently than E_Enum only on TC 4026 and newer (comments and attributes)
+TYPE E_ExtendedEnum :
+(
+	Disabled 	:= 0, //Machine is disabled
+	Starting 	:= 50, //Machine is starting
+	Running 	:= 100, //Machine is running
+	Stopping	:= 200, //Machine is stopping
+	
+	{attribute 'ads-client-enum-attribute' := 'example-enum-value-ääö'}
+	Unknown		:= -99 //Machine is ääöööÄÄÖö
+);
+END_TYPE]]></Declaration>
+  </DUT>
+</TcPlcObject>

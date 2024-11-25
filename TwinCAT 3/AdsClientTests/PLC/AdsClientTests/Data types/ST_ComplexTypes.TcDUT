@@ -11,6 +11,7 @@ STRUCT
 	ENUM_3		: E_Enum := 5555; //Not a valid value
 	ENUM_4		: E_LintEnum := E_LintEnum.Negative;
 	ENUM_5		: (Implicit, Enum, Values, Go, Here) := Values;
+	ENUM_6		: E_ExtendedEnum := E_Enum.Unknown;
 	POINTER_	: POINTER TO ST_StandardTypes;
 	REFERENCE_	: REFERENCE TO ST_StandardTypes;
 	SUBRANGE_	: INT(-4095..4095) := 1234;

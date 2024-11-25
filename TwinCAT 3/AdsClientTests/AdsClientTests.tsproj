@@ -13,7 +13,7 @@
 		</System>
 		<Plc>
 			<Project GUID="{E1A48BE2-E57D-4BEA-A2CA-359556123FAF}" Name="PLC" PrjFilePath="PLC\PLC.plcproj" TmcFilePath="PLC\PLC.tmc" ReloadTmc="true" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" AmsPort="851" TmcPath="PLC\PLC.tmc" TmcHash="{16296299-86F3-23E0-325D-E3617C29F38F}">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" AmsPort="851" TmcPath="PLC\PLC.tmc" TmcHash="{1E1342EA-ABFE-CFCF-CF81-0B49DE6447CD}">
 					<Name>PLC Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Contexts>
@@ -31,7 +31,7 @@
 						<TaskPouOid Prio="20" OTCID="#x08502001"/>
 					</TaskPouOids>
 				</Instance>
-				<Instance Id="#x08502040" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" AmsPort="852" TmcPath="PLC\PLC.tmc" TmcHash="{16296299-86F3-23E0-325D-E3617C29F38F}">
+				<Instance Id="#x08502040" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" AmsPort="852" TmcPath="PLC\PLC.tmc" TmcHash="{1E1342EA-ABFE-CFCF-CF81-0B49DE6447CD}">
 					<Name>PLC Instance (port 852)</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Contexts>

@@ -17,6 +17,9 @@ STRUCT
 	EmptyArray 		: ARRAY[0..-1] OF BOOL; //How is this even possible..?
 	
 	Bits			: ST_Bits;
+	
+    {attribute 'TcEncoding':='UTF-8'}
+	STRING_UTF8		: STRING := 'A test string ääöö!!@@';
 END_STRUCT
 END_TYPE
 ]]></Declaration>
