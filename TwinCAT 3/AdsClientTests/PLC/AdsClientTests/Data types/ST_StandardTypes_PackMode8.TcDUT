@@ -24,6 +24,8 @@ STRUCT
 	REAL_4 	: REAL := -75483.545;
 	STRING_	: STRING := 'A test string ääöö!!@@';
 	STRING_2: STRING(255) := 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque bibendum mauris vel metus rutrum, sed gravida justo dignissim. Aenean et nisi cursus, auctor mi vel, posuere enim. Suspendisse ultricies mauris in finibus tristique. Nullam turpis duis.';
+	{attribute 'TcEncoding' := 'UTF-8'}
+	STRING_3: STRING := wsLiteral_TO_UTF8("ベッコフ");
 	DATE_ 	: DATE := D#2106-02-06;
 	DT_ 	: DT := DT#2106-02-06-06:28:15;
 	DT_2 	: DATE_AND_TIME := DT#2106-02-06-06:28:15;
